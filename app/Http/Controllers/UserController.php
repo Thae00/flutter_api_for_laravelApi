@@ -55,7 +55,11 @@ class UserController extends Controller
 
         $api = $user->createToken("Api Token")->accessToken;
 
-        $status = array("status"=>true, "message"=>"User Created Successfully", "api"=>$api);
-        return $status;
+        //$status = array("status"=>true, "message"=>"User Created Successfully", "api"=>$api);
+        return response()-> json([
+            "status"=> true,
+            "message"=> "User Created Successfully",
+            "api" => $api
+        ]);
     }
 }
