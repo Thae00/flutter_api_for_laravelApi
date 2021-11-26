@@ -40,6 +40,7 @@ Route::group(['middleware'=>"auth:api"], function(){
 
     Route::get('posts',[PostController::class, 'index']);
     Route::post('post',[PostController::class, 'create']);
+    Route::get('post/{id}',[PostController::class, 'show']);
     Route::post('posts/{id}',[PostController::class, 'update']);
     Route::get('posts/{id}',[PostController::class, 'destroy']);
 

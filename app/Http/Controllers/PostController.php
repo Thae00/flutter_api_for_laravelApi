@@ -27,6 +27,11 @@ class PostController extends Controller
         return $arr;
     }
 
+    public function show($id){
+       $post =  Post::find($id);
+       return $post;
+    }
+
 
     public function update(Request $request,$id){
 
