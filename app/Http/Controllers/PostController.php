@@ -23,7 +23,7 @@ class PostController extends Controller
             "text"=>$request->input("text"),
         ]);
 
-        $arr = array("status"=>true, "message"=>"Post Created Successfully!");
+        $arr = array("status"=>true, "message"=>"Post Created Successfully!","api"=>"");
         return $arr;
     }
 
@@ -40,7 +40,7 @@ class PostController extends Controller
             "text"=>$request->input('text')
         ]);
 
-        $result = array("status"=>true, "message"=>"Post Updated Successfully");
+        $result = array("status"=>true, "message"=>"Post Updated Successfully","api"=>"");
         return $result;
     }
 
