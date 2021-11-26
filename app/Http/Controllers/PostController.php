@@ -52,7 +52,7 @@ class PostController extends Controller
 
     public function destroy($id){
         Post::destroy($id);
-        $result = array('status'=>true, "message"=>"Post Delete Successfully!");
+        $result = array('status'=>true, "message"=>"Post Delete Successfully!", "api"=>"");
         return $result;
     }
 }
